@@ -1,0 +1,246 @@
+
+:root { /*BASE OF THE CODE (labels background color and colors*/
+    --bg-color: #1f242d;
+    --second-bg-color: grey;
+    --text-color: #fff;
+    --main-color: pink;
+}
+
+body { /*establishes the background color itself*/ 
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+section { /*this edits the section, in this case is a page of the code*/
+    min-height: 100vh; /*equal to 100 percent of the viewport height*/
+    padding: 10rem 9% 2rem; /*creates space around an element's content top left and bottom*/
+}
+
+
+ /*hover is when you hover your cursour over the list items*/
+.list a.active {
+    color: pink;
+   border-bottom: none;
+   transition: border-bottom 0.3s ease;
+}
+.list a:hover
+{
+    border-bottom:2px solid pink
+}
+
+.header { /*editing the header of the content*/
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: var(--bg-color);
+    display: flex; /* can hold a flexible amount of child elements*/
+    justify-content: space-between; /*edits the flex items, in this case space between*/
+    align-items: center;
+    z-index: 1000; /*control stacking order*/
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: white;
+    cursor: default;
+}
+
+.list {
+    display: flex;
+    list-style: none;
+}
+
+.list a {
+    margin-left: 4rem;
+    font-size: 1.7rem;
+    color: var(--text-color);
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    text-decoration: none;
+    transition: all 0.55s ease;
+}
+
+.list a:hover {
+    color: var(--main-color);
+}
+
+#menu-icon {
+    color: white;
+    font-size: 30px;
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+}
+
+.brad {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.brad-img {
+    mix-blend-mode: multiply;
+    height: 40%;
+    width: 40%;
+}
+
+section {
+    padding: 0 19%;
+}
+
+.brad-text h1 {
+    font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+    font-family: 'Raleway';
+    line-height: 1.3;
+    margin: 0;
+}
+
+.brad-text h3 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    font-family: 'Raleway';
+    margin: 0;
+}
+
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 2rem;
+}
+
+span {
+    color: var(--main-color);
+}
+
+.social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: 0.2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 3rem 1.5rem 3rem 0;
+}
+
+.social-media a:hover {
+    background: var(--main-color);
+    color: var(--second-bg-color);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.resume {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background: var(--second-bg-color);
+}
+
+.header {
+    text-align: center;
+}
+
+.header h1 {
+    margin-bottom: 10px;
+}
+
+.header h3 {
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'Raleway';
+}
+
+.img-area {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 25px auto;
+    border: 15px groove pink;
+}
+
+.img-area img {
+    width: 100%;
+}
+
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Raleway';
+}
+
+.left {
+    flex: 1;
+    padding: 30px;
+}
+
+.left p {
+    line-height: 2;
+}
+
+.left ul li {
+    line-height: 2;
+}
+
+h2 {
+    background: pink;
+    padding: 15px;
+    color: #fff;
+    margin: 30px 0;
+    font-size: 20px;
+    border-radius: 0 50px 50px 0;
+}
+
+.right {
+    flex: 1;
+    padding: 30px;
+}
+
+.right h3 {
+    margin-bottom: 15px;
+}
+
+.right p {
+    line-height: 2.9;
+}
+
+.right ul li {
+    line-height: 2;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .container {
+        width: 95%;
+        height: auto;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .main {
+        flex-direction: column;
+    }
+
+    .left, .right {
+        flex: none;
+        width: 100%;
+    }
+
+    .container {
+        width: 95%;
+        height: auto;
+    }
+
+    h2 {
+        font-size: 15px;
+    }
+}
